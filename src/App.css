@@ -1,0 +1,138 @@
+* {
+  margin: 5px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 20px;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: #005AD6;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.date-info,
+.portfolio-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-date,
+.card {
+  border-radius: 12px;
+  padding: 18px;
+  background-color: #fff;
+  border: 0.5px solid #e1e1e1;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+  margin-bottom: 20px;
+  flex: 1 1 calc(50% - 20px);
+}
+
+@media (max-width: 600px) {
+  .card-date,
+  .card {
+    flex: 1 1 100%; 
+  }
+}
+
+.card h2 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 15px;
+}
+
+.profit-value,
+.return-value {
+  color: #62a4ff;
+  font-weight: bold;
+}
+
+.stock-selector {
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 0.5px solid #e1e1e1;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 16px;
+  color: #333;
+}
+
+.select,
+.date-input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: 'Poppins';
+  background-color: #fff;
+  color: #000;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+  filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(180deg);
+  cursor: pointer;
+}
+
+.date-input::-moz-calendar-picker-indicator {
+  filter: brightness(0.5);
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
