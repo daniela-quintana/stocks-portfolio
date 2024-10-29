@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import "./App.css";
+import logo from '../public/fintual.svg';
 
 class Stock {
   constructor(public symbol: string, private prices: { [date: string]: number }) {}
@@ -152,7 +153,7 @@ const App: React.FC = () => {
   return (
     <div className="container">
           <header className="header">
-            <img src="../public/fintual.svg" alt="Logo de Fintual" />
+            <img src={logo} alt="Logo de Fintual" />
             <h1>Stocks Portfolio</h1>
             <h3>Hello {name} 👋</h3>
           </header>
