@@ -2,6 +2,8 @@
 
 Este proyecto es una aplicación de React desarrollada con TypeScript y Vite. Permite al usuario ver el rendimiento y las ganancias de un portafolio de acciones en un rango de fechas específico, usando datos de una API para obtener precios de acciones históricos.
 
+<img src=./src/assets/example.gif>
+
 ## 🛠 Tecnologías utilizadas
 
 - **React**: Para la construcción de la interfaz de usuario.
