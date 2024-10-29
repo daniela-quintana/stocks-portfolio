@@ -64,6 +64,6 @@ Este proyecto es una aplicación de React desarrollada con TypeScript y Vite. Pe
 2. Especifica las fechas de inicio y fin para calcular la ganancia y el retorno anualizado.
 3. Observa los valores calculados que se muestran en la sección **Profit** y **Annualized Return**.
 
-## 🌐 GitHub Pages
+## 🖥️ GitHub Pages
 
-Puedes ver la aplicación en vivo en [GitHub Pages](link).
+Puedes ver la aplicación en vivo en [GitHub Pages](https://daniela-quintana.github.io/stocks-portfolio/).
