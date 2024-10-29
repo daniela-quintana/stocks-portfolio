@@ -17,7 +17,7 @@ body {
 .container {
   max-width: 1200px;
   padding: 20px;
-  width: 100%;
+  width: 800px;
 }
 
 .header {
@@ -51,7 +51,6 @@ h3 {
   background-color: #fff;
   border: 0.5px solid #e1e1e1;
   box-sizing: border-box;
-  font-family: 'Poppins';
   margin-bottom: 20px;
   flex: 1 1 calc(50% - 20px);
 }
@@ -118,6 +117,11 @@ h3 {
 }
 
 @media (max-width: 768px) {
+  .container {
+    width: 100%;
+    display: inline;
+  }
+
   .header h1 {
     font-size: 2.5rem;
   }
@@ -128,6 +132,11 @@ h3 {
 }
 
 @media (max-width: 480px) {
+  .container {
+    width: 100%;
+    display: inline;
+  }
+
   .header h1 {
     font-size: 2rem;
   }

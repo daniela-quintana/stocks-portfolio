@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
 import "./App.css";
-import Spinner from "./components/Spinner";
 
 class Stock {
   constructor(public symbol: string, private prices: { [date: string]: number }) {}
@@ -51,14 +50,12 @@ const App: React.FC = () => {
   const [endDate, setEndDate] = useState<string>(new Date().toISOString().split("T")[0]);
   const [error, setError] = useState<string>("");
   const [name, setName] = useState("");
-  const [loading, setLoading] = useState(true);
 
   const apiKey = import.meta.env.VITE_API_KEY;
   const apiSecret = import.meta.env.VITE_API_SECRET;
   const initialStocks = ["AAPL", "AMZN", "IBM", "GOOGL"];
 
   const fetchStock = useCallback(async (symbol: string, start: string, end: string) => {
-    setLoading(true);
     const options = {
       method: "GET",
       headers: {
@@ -108,8 +105,6 @@ const App: React.FC = () => {
     } catch (err) {
       console.error("Error fetching stock bars:", err);
       setError("Error fetching stock bars");
-    } finally {
-      setLoading(false);
     }
   }, [apiKey, apiSecret, startDate, endDate]);
 
@@ -156,10 +151,6 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      {loading ? (
-        <Spinner />
-      ) : (
-        <>
           <header className="header">
             <img src="../public/fintual.svg" alt="Logo de Fintual" />
             <h1>Stocks Portfolio</h1>
@@ -243,8 +234,6 @@ const App: React.FC = () => {
 
             {error && <p className="error">{error}</p>}
           </main>
-        </>
-      )}
     </div>
   );
 };
